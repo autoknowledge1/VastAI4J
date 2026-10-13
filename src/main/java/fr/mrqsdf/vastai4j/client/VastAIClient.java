@@ -32,8 +32,7 @@ import java.util.Optional;
  */
 public class VastAIClient {
 
-    public static final String DEFAULT_BASE_URL = "https://console.vast.ai/api/v0";
-
+    public static final String DEFAULT_BASE_URL = "https://console.vast.ai/api/";
 
     private final HttpClient httpClient;
     private final Gson gson;
@@ -205,7 +204,7 @@ public class VastAIClient {
         Map<String, String> queryParams = new LinkedHashMap<>(request.getQueryParams());
 
         String query = buildQueryString(queryParams);
-        URI uri = baseUri.resolve(resolvedPath + query);
+        URI uri = baseUri.resolve(request.getVersion()+"/"+resolvedPath + query);
 
         HttpRequest.Builder builder = HttpRequest.newBuilder()
                 .header("Authorization", "Bearer " + apiKey)

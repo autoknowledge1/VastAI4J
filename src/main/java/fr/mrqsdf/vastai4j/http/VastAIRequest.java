@@ -18,6 +18,7 @@ public final class VastAIRequest {
     private final Map<String, String> queryParams;
     private final Object body;
     private final Map<String, String> headers;
+    private final String version;
 
     /**
      * Private constructor used by the builder.
@@ -29,6 +30,7 @@ public final class VastAIRequest {
         this.queryParams = Collections.unmodifiableMap(new LinkedHashMap<>(builder.queryParams));
         this.body = builder.body;
         this.headers = Collections.unmodifiableMap(new LinkedHashMap<>(builder.headers));
+        this.version = builder.version;
     }
 
     /**
@@ -72,6 +74,14 @@ public final class VastAIRequest {
     }
 
     /**
+     * Gets the version of the request.
+     * @return the request version (e.g., "v0")
+     */
+    public String getVersion() {
+        return version;
+    }
+
+    /**
      * Converts the query parameters to a URL-encoded query string.
      * @return the query string starting with '?', or an empty string if no parameters
      */
@@ -105,6 +115,7 @@ public final class VastAIRequest {
         private final Map<String, String> queryParams = new LinkedHashMap<>();
         private Object body;
         private final Map<String, String> headers = new LinkedHashMap<>();
+        private String version = "v0";
 
         private Builder() {
         }
@@ -227,6 +238,16 @@ public final class VastAIRequest {
          */
         public Builder body(Object body) {
             this.body = body;
+            return this;
+        }
+
+        /**
+         * Sets the version of the request.
+         * @param version the version of the request (default: "v0")
+         * @return the builder instance
+         */
+        public Builder version(String version) {
+            this.version = version;
             return this;
         }
 
