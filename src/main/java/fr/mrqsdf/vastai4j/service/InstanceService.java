@@ -97,7 +97,6 @@ public final class InstanceService implements Service {
                 .put()
                 .path("/asks/" + offerId + "/")
                 .body(body)
-                .version("v0")
                 .build();
 
         return client.execute(req, CreateInstanceResponse.class);
@@ -124,7 +123,6 @@ public final class InstanceService implements Service {
         VastAIRequest req = client.requestBuilder()
                 .put()
                 .path("/instances/" + instanceId + "/")
-                .version("v0")
                 .body(new StateOrLabel(null, label))
                 .build();
         client.execute(req, String.class);
@@ -137,7 +135,6 @@ public final class InstanceService implements Service {
         VastAIRequest req = client.requestBuilder()
                 .put()
                 .path("/instances/reboot/" + instanceId + "/")
-                .version("v0")
                 .build();
         client.execute(req, String.class);
     }
@@ -149,7 +146,6 @@ public final class InstanceService implements Service {
         VastAIRequest req = client.requestBuilder()
                 .delete()
                 .path("/instances/" + instanceId + "/")
-                .version("v0")
                 .build();
         client.execute(req, String.class);
     }
@@ -161,7 +157,6 @@ public final class InstanceService implements Service {
         VastAIRequest req = client.requestBuilder()
                 .get()
                 .path("/instances/" + instanceId + "/")
-                .version("v0")
                 .build();
         return client.execute(req, InstanceDetails.class);
     }
@@ -172,7 +167,6 @@ public final class InstanceService implements Service {
         VastAIRequest req = client.requestBuilder()
                 .put()
                 .path("/instances/" + instanceId + "/")
-                .version("v0")
                 .body(new StateOrLabel(state, null))
                 .build();
         client.execute(req, String.class);
