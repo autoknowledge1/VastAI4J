@@ -4,7 +4,7 @@ package fr.mrqsdf.vastai4j.query;
  * Operators supported by the Vast.ai offer search API.
  */
 public enum Op {
-    LT("lt"), LE("le"), EQ("eq"), NE("neq"), GE("ge"), GT("gt"),
+    LT("lt"), LE("lte"), EQ("eq"), NE("neq"), GE("gte"), GT("gt"),
     IN("in"), NOT_IN("notin");
 
     private final String jsonKey;

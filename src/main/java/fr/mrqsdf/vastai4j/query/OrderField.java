@@ -11,7 +11,7 @@ public enum OrderField {
     DLPERF("dlperf"),
     DLPERF_USD("dlperf_usd"),
     FLOPS_USD("flops_usd"),
-    DPH("dph"),
+    DPH("dph_base"),
     RELIABILITY("reliability"),
     TOTAL_FLOPS("total_flops"),
     GPU_RAM("gpu_ram"),

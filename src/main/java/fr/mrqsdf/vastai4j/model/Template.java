@@ -26,6 +26,6 @@ public record Template(
         @SerializedName("owner_id") Long ownerId,
         @SerializedName("public") Boolean isPublic,
         @SerializedName("recommended") Boolean isRecommended,
-        @SerializedName("created_at") Long createdAtEpochSec
+        @SerializedName("created_at") Double createdAtEpochSec
 ) {
 }

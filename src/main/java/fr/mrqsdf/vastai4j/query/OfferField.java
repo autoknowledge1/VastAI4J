@@ -14,7 +14,7 @@ public enum OfferField {
     DATACENTER("datacenter"),
     DIRECT_PORT_COUNT("direct_port_count"),
     DISK_BW("disk_bw"),
-    DISK_SPACE("disk_space"),
+    DISK_SPACE_GB("disk_space"),
     DLPERF("dlperf"),
     DLPERF_USD("dlperf_usd"),
     DPH("dph"),

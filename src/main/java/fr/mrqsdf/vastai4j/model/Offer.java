@@ -55,7 +55,7 @@ public record Offer(
         @SerializedName("num_gpus") Integer numGpus,
         @SerializedName("gpu_ram") Double gpuRamGiB,
         @SerializedName("gpu_total_ram") Double gpuTotalRamGiB,
-        @SerializedName("cuda_vers") Double cudaVers,
+        @SerializedName("cuda_max_good") Double cudaVers,
         @SerializedName("driver_version") String driverVersion,
         @SerializedName("cpu_arch") String cpuArch,
         @SerializedName("cpu_cores") Integer cpuCores,
