@@ -100,7 +100,7 @@ public record InstanceDetails(
             @SerializedName("start_date") Double startDate,
             @SerializedName("end_date") Double endDate,
             @SerializedName("duration") Double duration,
-            @SerializedName("uptime_mins") Long uptimeMins,
+            @SerializedName("uptime_mins") Double uptimeMins,
             @SerializedName("static_ip") Boolean staticIp,
             @SerializedName("external") Boolean external,
             @SerializedName("rentable") Boolean rentable,
